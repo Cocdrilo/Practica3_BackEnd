@@ -14,9 +14,9 @@ export type kidModel = {
 
 export type placesModel = {
     _id : ObjectId
-    nombre : string
+    name : string
     coordenadas : number []
-    numNiñosBuenos : number
+    goodKids : number
 }
 
 export type kid ={
@@ -28,7 +28,7 @@ export type kid ={
 
 export type place = {
     id : string
-    nombre : string
+    name : string
     coordenadas : number[]
-    numNiñosBuenos : number
+    goodKids : number
 }
