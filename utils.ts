@@ -10,7 +10,6 @@ export const convertplacesModelToPlace = (placeModel : placesModel):place =>{
         id: placeModel._id.toString(),
         coordenadas:placeModel.coordenadas,
         name : placeModel.name,
-        goodKids : placeModel.goodKids
     }
 }
 
