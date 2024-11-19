@@ -38,7 +38,10 @@ const handler = async (req:Request):Promise<Response> =>{
             if(!ubicacion.coordenadas || ubicacion.nombre || ubicacion.numNiñosBuenos){
                 return new Response('error: Faltan datos en el cuerpo de la solicitud de Post',{status:400})
             }
-            if(checkCoordsReal(ubicacion.coordenadas))
+            if(!checkCoordsReal(ubicacion.coordenadas.get(0),ubicacion.coordenadas.get(1))){
+                return new Response('error : Las coordenadas no existen o son incorrectas',{status:400})
+            }
+
         }
     }
 
