@@ -2,10 +2,10 @@ import { MongoClient, ObjectId } from "npm:mongodb";
 import { goodOrBad, kidModel, placesModel } from "./types.ts";
 import { convertplacesModelToPlace } from "./utils.ts";
 
-const url = Deno.env.get('MONGO_DB');
+const url = 'mongodb+srv://cocdrilo:cocdrilo@nebrijatest.n7ral.mongodb.net/?retryWrites=true&w=majority&appName=NebrijaTest'
 if (!url) {
     console.error('Url inválida');
-    Deno.exit(-1);
+    throw new Error('Gestion de error ')
 }
 
 const client = new MongoClient(url);
